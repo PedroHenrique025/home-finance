@@ -91,7 +91,7 @@ Além disso, utilizei componentes reutilizáveis, cards informativos e tabelas i
 Sobre a documentação, em resumo:
 
 - **API**: grande parte da documentação está disponível no Swagger, complementada por este documento e por comentários pontuais no código.
-- **Front-end (React)**: a documentação é feita por meio deste README e de comentários no código, com o objetivo de esclarecer a lógica adotada.
+- **Front-end (React)**: a documentação também é feita por este documento e de comentários no código, com o objetivo de esclarecer a lógica adotada.
 
 
 
