@@ -1,0 +1,134 @@
+/**
+ * Estilos globais da aplicação
+ * Define variáveis CSS, reset e estilos base
+ */
+
+/* Variáveis CSS para cores e temas */
+:root {
+  /* Cores principais */
+  --cor-primaria: #2563eb;
+  --cor-primaria-hover: #1d4ed8;
+  --cor-secundaria: #64748b;
+  --cor-secundaria-hover: #475569;
+  
+  /* Cores de status */
+  --cor-sucesso: #10b981;
+  --cor-sucesso-claro: #d1fae5;
+  --cor-erro: #ef4444;
+  --cor-erro-claro: #fee2e2;
+  --cor-aviso: #f59e0b;
+  --cor-aviso-claro: #fef3c7;
+  --cor-info: #3b82f6;
+  --cor-info-claro: #dbeafe;
+  
+  /* Cores de fundo */
+  --cor-fundo: #f8fafc;
+  --cor-fundo-card: #ffffff;
+  --cor-fundo-header: #1e293b;
+  --cor-fundo-footer: #0f172a;
+  
+  /* Cores de texto */
+  --cor-texto-primario: #1e293b;
+  --cor-texto-secundario: #64748b;
+  --cor-texto-claro: #ffffff;
+  
+  /* Bordas e sombras */
+  --cor-borda: #e2e8f0;
+  --sombra-card: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --sombra-card-hover: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  
+  /* Espaçamentos */
+  --espacamento-xs: 0.25rem;
+  --espacamento-sm: 0.5rem;
+  --espacamento-md: 1rem;
+  --espacamento-lg: 1.5rem;
+  --espacamento-xl: 2rem;
+  
+  /* Tamanhos de fonte */
+  --fonte-xs: 0.75rem;
+  --fonte-sm: 0.875rem;
+  --fonte-md: 1rem;
+  --fonte-lg: 1.125rem;
+  --fonte-xl: 1.25rem;
+  --fonte-2xl: 1.5rem;
+  --fonte-3xl: 2rem;
+}
+
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-primario);
+  line-height: 1.6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilização de scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cor-fundo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cor-secundaria);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-secundaria-hover);
+}
+
+/* Links */
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--cor-primaria-hover);
+}
+
+/* Utilitários gerais */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-1 { margin-top: var(--espacamento-sm); }
+.mt-2 { margin-top: var(--espacamento-md); }
+.mt-3 { margin-top: var(--espacamento-lg); }
+
+.mb-1 { margin-bottom: var(--espacamento-sm); }
+.mb-2 { margin-bottom: var(--espacamento-md); }
+.mb-3 { margin-bottom: var(--espacamento-lg); }
+
+.p-1 { padding: var(--espacamento-sm); }
+.p-2 { padding: var(--espacamento-md); }
+.p-3 { padding: var(--espacamento-lg); }

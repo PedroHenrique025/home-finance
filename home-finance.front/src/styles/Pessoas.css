@@ -1,0 +1,166 @@
+/**
+ * Estilos do componente Pessoas
+ * Formulário e listagem de pessoas
+ */
+
+.pessoas-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pessoas-container h1 {
+  font-size: var(--fonte-3xl);
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-primaria);
+}
+
+/* Seção de formulário */
+.formulario-section {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-xl);
+  border-radius: 8px;
+  margin-bottom: var(--espacamento-xl);
+  box-shadow: var(--sombra-card);
+}
+
+.formulario-section h2 {
+  font-size: var(--fonte-xl);
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-texto-primario);
+}
+
+/* Formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-lg);
+}
+
+.formulario .btn {
+  align-self: flex-start;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-sm);
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--cor-texto-primario);
+  font-size: var(--fonte-md);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: var(--espacamento-sm) var(--espacamento-md);
+  border: 2px solid var(--cor-borda);
+  border-radius: 6px;
+  font-size: var(--fonte-md);
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+  background-color: var(--cor-fundo);
+  cursor: not-allowed;
+}
+
+.form-hint {
+  font-size: var(--fonte-sm);
+  color: var(--cor-texto-secundario);
+}
+
+.form-hint.aviso {
+  color: var(--cor-aviso);
+  font-weight: 500;
+}
+
+/* Seção de lista */
+.lista-section {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-xl);
+  border-radius: 8px;
+  box-shadow: var(--sombra-card);
+}
+
+.lista-section h2 {
+  font-size: var(--fonte-xl);
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-texto-primario);
+}
+
+.mensagem-vazia {
+  text-align: center;
+  padding: var(--espacamento-xl);
+  color: var(--cor-texto-secundario);
+  font-style: italic;
+}
+
+/* Tabelas */
+.tabela-wrapper {
+  overflow-x: auto;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fonte-md);
+}
+
+.tabela thead {
+  background-color: var(--cor-fundo);
+}
+
+.tabela th {
+  padding: var(--espacamento-md);
+  text-align: left;
+  font-weight: 600;
+  color: var(--cor-texto-primario);
+  border-bottom: 2px solid var(--cor-borda);
+}
+
+.tabela td {
+  padding: var(--espacamento-md);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.tabela tbody tr:hover {
+  background-color: var(--cor-fundo);
+}
+
+.tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pessoas-container {
+    padding: var(--espacamento-md);
+  }
+  
+  .formulario-section,
+  .lista-section {
+    padding: var(--espacamento-md);
+  }
+  
+  .tabela {
+    font-size: var(--fonte-sm);
+  }
+  
+  .tabela th,
+  .tabela td {
+    padding: var(--espacamento-sm);
+  }
+}

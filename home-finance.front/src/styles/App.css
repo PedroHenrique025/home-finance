@@ -1,0 +1,318 @@
+/**
+ * Estilos do componente principal App
+ * Layout geral, header, footer e navegação
+ */
+
+/* Layout principal */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background-color: var(--cor-fundo-header);
+  color: var(--cor-texto-claro);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--espacamento-md) var(--espacamento-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--espacamento-md);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-sm);
+  color: var(--cor-texto-claro);
+  font-size: var(--fonte-xl);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.8;
+  color: var(--cor-texto-claro);
+}
+
+.logo-icon {
+  font-size: var(--fonte-2xl);
+}
+
+/* Navegação */
+.main-nav {
+  display: flex;
+  gap: var(--espacamento-sm);
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--cor-texto-claro);
+  padding: var(--espacamento-sm) var(--espacamento-md);
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  font-size: var(--fonte-sm);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--cor-texto-claro);
+}
+
+.nav-link.active {
+  background-color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+/* Área principal de conteúdo */
+.app-main {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--espacamento-xl) var(--espacamento-lg);
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--cor-fundo-footer);
+  color: var(--cor-texto-claro);
+  padding: var(--espacamento-lg);
+  text-align: center;
+  font-size: var(--fonte-sm);
+  margin-top: auto;
+}
+
+/* Página 404 */
+.pagina-404 {
+  text-align: center;
+  padding: var(--espacamento-xl);
+}
+
+.pagina-404 h1 {
+  font-size: 6rem;
+  color: var(--cor-primaria);
+  margin-bottom: var(--espacamento-md);
+}
+
+.pagina-404 h2 {
+  font-size: var(--fonte-2xl);
+  margin-bottom: var(--espacamento-sm);
+}
+
+.pagina-404 p {
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espacamento-lg);
+}
+
+/* Estilos comuns de botões */
+.btn {
+  padding: var(--espacamento-sm) var(--espacamento-lg);
+  border: none;
+  border-radius: 6px;
+  font-size: var(--fonte-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--espacamento-xs);
+  width: fit-content;
+}
+
+/* Botões em formulários não devem ocupar toda largura */
+.formulario .btn,
+form .btn {
+  align-self: flex-start;
+}
+
+/* Container para ações do formulário com espaçamento entre botões */
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--cor-primaria-hover);
+}
+
+.btn-secondary {
+  background-color: var(--cor-erro);
+  color: var(--cor-texto-claro);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.btn-success {
+  background-color: var(--cor-sucesso);
+  color: var(--cor-texto-claro);
+}
+
+.btn-success:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.btn-danger {
+  background-color: var(--cor-erro);
+  color: var(--cor-texto-claro);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.btn-small {
+  padding: var(--espacamento-xs) var(--espacamento-sm);
+  font-size: var(--fonte-sm);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: var(--espacamento-xs) var(--espacamento-sm);
+  border-radius: 4px;
+  font-size: var(--fonte-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-small {
+  padding: 2px 6px;
+  font-size: 0.65rem;
+  margin-left: var(--espacamento-xs);
+}
+
+.badge-success {
+  background-color: var(--cor-sucesso-claro);
+  color: var(--cor-sucesso);
+}
+
+.badge-danger {
+  background-color: var(--cor-erro-claro);
+  color: var(--cor-erro);
+}
+
+.badge-warning {
+  background-color: var(--cor-aviso-claro);
+  color: var(--cor-aviso);
+}
+
+.badge-info {
+  background-color: var(--cor-info-claro);
+  color: var(--cor-info);
+}
+
+/* Mensagens */
+.mensagem {
+  padding: var(--espacamento-md);
+  border-radius: 6px;
+  margin-bottom: var(--espacamento-md);
+  font-weight: 500;
+}
+
+.mensagem.erro {
+  background-color: var(--cor-erro-claro);
+  color: var(--cor-erro);
+  border-left: 4px solid var(--cor-erro);
+}
+
+.mensagem.sucesso {
+  background-color: var(--cor-sucesso-claro);
+  color: var(--cor-sucesso);
+  border-left: 4px solid var(--cor-sucesso);
+}
+
+.mensagem.aviso {
+  background-color: var(--cor-aviso-claro);
+  color: var(--cor-aviso);
+  border-left: 4px solid var(--cor-aviso);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .main-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-link {
+    text-align: center;
+  }
+  
+  .app-main {
+    padding: var(--espacamento-md);
+  }
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-xl);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-texto-primario);
+}
+
+.modal-content .form-group {
+  margin-bottom: var(--espacamento-md);
+}
+
+.modal-content .form-actions {
+  margin-top: var(--espacamento-lg);
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}

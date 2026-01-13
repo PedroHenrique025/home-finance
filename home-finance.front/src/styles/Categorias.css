@@ -1,0 +1,98 @@
+/**
+ * Estilos do componente Categorias
+ * Formulário e listagem de categorias com estatísticas
+ */
+
+.categorias-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.categorias-container h1 {
+  font-size: var(--fonte-3xl);
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-primaria);
+}
+
+/* Seção de estatísticas */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--espacamento-md);
+  margin-bottom: var(--espacamento-xl);
+}
+
+.stat-card {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-lg);
+  border-radius: 8px;
+  box-shadow: var(--sombra-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacamento-sm);
+  border-left: 4px solid var(--cor-primaria);
+}
+
+.stat-card.despesa {
+  border-left-color: var(--cor-erro);
+}
+
+.stat-card.receita {
+  border-left-color: var(--cor-sucesso);
+}
+
+.stat-card.ambas {
+  border-left-color: var(--cor-info);
+}
+
+.stat-label {
+  font-size: var(--fonte-sm);
+  color: var(--cor-texto-secundario);
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: var(--fonte-2xl);
+  font-weight: 700;
+  color: var(--cor-texto-primario);
+}
+
+/* Valores positivos e negativos */
+.valor-positivo {
+  color: var(--cor-sucesso);
+  font-weight: 600;
+}
+
+.valor-negativo {
+  color: var(--cor-erro);
+  font-weight: 600;
+}
+
+/* Saldos */
+.saldo-positivo {
+  background-color: var(--cor-sucesso-claro);
+  color: var(--cor-sucesso);
+  border-left-color: var(--cor-sucesso) !important;
+}
+
+.saldo-negativo {
+  background-color: var(--cor-erro-claro);
+  color: var(--cor-erro);
+  border-left-color: var(--cor-erro) !important;
+}
+
+.saldo-neutro {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-secundario);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-card {
+    padding: var(--espacamento-md);
+  }
+}

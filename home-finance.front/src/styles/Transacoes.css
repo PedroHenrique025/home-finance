@@ -1,0 +1,44 @@
+/**
+ * Estilos do componente Transações
+ * Formulário  com validações e listagem de transações
+ */
+
+.transacoes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.transacoes-container h1 {
+  font-size: var(--fonte-3xl);
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-primaria);
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Nome da pessoa na tabela */
+.nome-pessoa {
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-xs);
+}
+
+/* Descrição da categoria */
+.descricao-categoria {
+  font-weight: 500;
+}
+
+/* Responsividade para transações */
+@media (max-width: 768px) {
+  .transacoes-container {
+    padding: var(--espacamento-md);
+  }
+  
+  textarea {
+    min-height: 60px;
+  }
+}

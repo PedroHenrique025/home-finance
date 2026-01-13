@@ -1,0 +1,159 @@
+﻿/* ============================================
+   Arquivo para estilização personalizada do Swagger UI
+   ============================================ */
+
+/* === COR DA FONTE PRINCIPAL === */
+body {
+    color: #4a4a4a !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* === TÍTULOS === */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50 !important;
+}
+
+/* Título principal da API */
+.title {
+    color: #2c3e50 !important;
+}
+
+/* === DESCRIÇÕES E TEXTOS === */
+.renderedMarkdown p,
+.markdown p {
+    color: #555555 !important;
+}
+
+.opblock-description-wrapper p,
+.opblock-external-docs-wrapper p,
+.opblock-title_normal p {
+    color: #555555 !important;
+}
+
+/* === BLOCOS DE ENDPOINTS === */
+.opblock-summary-description {
+    color: #4a4a4a !important;
+}
+
+.opblock-summary-path {
+    color: #2c3e50 !important;
+}
+
+/* === PARÂMETROS === */
+.parameter__name {
+    color: #2980b9 !important;
+    font-weight: 600;
+}
+
+.parameter__type {
+    color: #27ae60 !important;
+}
+
+/* === TABELAS === */
+.table tbody tr td {
+    color: #4a4a4a !important;
+}
+
+.table thead tr th {
+    color: #2c3e50 !important;
+}
+
+/* === CÓDIGO E EXEMPLOS === */
+pre {
+    color: #c7254e !important;
+    background-color: #f9f2f4 !important;
+    border: 1px solid #e1e8ed !important;
+}
+
+code {
+    color: #c7254e !important;
+    background-color: #f9f2f4 !important;
+}
+
+.highlight-code {
+    background-color: #f8f9fa !important;
+}
+
+/* === BOTÕES === */
+.btn {
+    font-weight: 500 !important;
+}
+
+    .btn.try-out__btn {
+        background-color: #27ae60 !important;
+        color: white !important;
+        border: none !important;
+    }
+
+    .btn.execute {
+        background-color: #2980b9 !important;
+        color: white !important;
+    }
+
+    .btn.cancel {
+        background-color: #95a5a6 !important;
+        color: white !important;
+    }
+
+/* === RESPONSES === */
+.response-col_status {
+    color: #27ae60 !important;
+    font-weight: 600;
+}
+
+.response-col_description {
+    color: #555555 !important;
+}
+
+/* === SCHEMAS === */
+.model-title {
+    color: #2c3e50 !important;
+}
+
+.model-box {
+    color: #4a4a4a !important;
+}
+
+/* === INPUTS === */
+input[type="text"],
+textarea,
+select {
+    color: #2c3e50 !important;
+    border-color: #bdc3c7 !important;
+}
+
+    input[type="text"]:focus,
+    textarea:focus {
+        border-color: #2980b9 !important;
+    }
+
+/* === MELHORIAS DE LEGIBILIDADE === */
+.opblock {
+    border-radius: 4px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+}
+
+.info .title {
+    font-size: 2.5rem !important;
+}
+
+/* === BADGES DE MÉTODO HTTP === */
+.opblock-get .opblock-summary-method {
+    background-color: #2980b9 !important;
+}
+
+.opblock-post .opblock-summary-method {
+    background-color: #27ae60 !important;
+}
+
+.opblock-put .opblock-summary-method {
+    background-color: #f39c12 !important;
+}
+
+.opblock-patch .opblock-summary-method {
+    background-color: #9b59b6 !important;
+}
+
+.opblock-delete .opblock-summary-method {
+    background-color: #e74c3c !important;
+}

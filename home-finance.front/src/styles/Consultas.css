@@ -1,0 +1,162 @@
+/**
+ * Estilos dos componentes de Consulta
+ * Relatórios de totais por pessoa e por categoria
+ */
+
+.consulta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.consulta-container h1 {
+  font-size: var(--fonte-3xl);
+  margin-bottom: var(--espacamento-sm);
+  color: var(--cor-primaria);
+}
+
+.consulta-container .descricao {
+  font-size: var(--fonte-lg);
+  color: var(--cor-texto-secundario);
+  margin-bottom: var(--espacamento-xl);
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: var(--espacamento-xl);
+  font-size: var(--fonte-lg);
+  color: var(--cor-texto-secundario);
+}
+
+/* Tabela de consulta */
+.tabela-consulta thead {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.tabela-consulta th {
+  color: var(--cor-texto-claro);
+  border-bottom-color: var(--cor-primaria-hover);
+}
+
+/* Seção de total geral */
+.total-geral-section {
+  margin-top: var(--espacamento-xl);
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-xl);
+  border-radius: 8px;
+  box-shadow: var(--sombra-card);
+}
+
+.total-geral-section h2 {
+  font-size: var(--fonte-2xl);
+  margin-bottom: var(--espacamento-lg);
+  color: var(--cor-texto-primario);
+  text-align: center;
+}
+
+/* Cards de total geral */
+.total-geral-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espacamento-lg);
+  margin-bottom: var(--espacamento-lg);
+}
+
+.total-card {
+  background-color: var(--cor-fundo);
+  padding: var(--espacamento-xl);
+  border-radius: 8px;
+  box-shadow: var(--sombra-card);
+  text-align: center;
+  border: 3px solid transparent;
+  transition: transform 0.2s;
+}
+
+.total-card:hover {
+  transform: translateY(-2px);
+}
+
+.total-card.receita {
+  border-color: var(--cor-sucesso);
+  background-color: var(--cor-sucesso-claro);
+}
+
+.total-card.despesa {
+  border-color: var(--cor-erro);
+  background-color: var(--cor-erro-claro);
+}
+
+.total-card-label {
+  font-size: var(--fonte-md);
+  color: var(--cor-texto-secundario);
+  font-weight: 600;
+  margin-bottom: var(--espacamento-sm);
+}
+
+.total-card-valor {
+  font-size: var(--fonte-3xl);
+  font-weight: 700;
+  color: var(--cor-texto-primario);
+  margin-bottom: var(--espacamento-xs);
+}
+
+.total-card-info {
+  font-size: var(--fonte-sm);
+  color: var(--cor-texto-secundario);
+  font-weight: 500;
+}
+
+/* Info box */
+.info-box {
+  background-color: var(--cor-info-claro);
+  border-left: 4px solid var(--cor-info);
+  padding: var(--espacamento-lg);
+  border-radius: 6px;
+  margin-top: var(--espacamento-lg);
+}
+
+.info-box h3 {
+  font-size: var(--fonte-lg);
+  margin-bottom: var(--espacamento-md);
+  color: var(--cor-info);
+}
+
+.info-box ul {
+  margin-left: var(--espacamento-lg);
+  color: var(--cor-texto-secundario);
+}
+
+.info-box li {
+  margin-bottom: var(--espacamento-sm);
+  line-height: 1.6;
+}
+
+.info-box strong {
+  color: var(--cor-texto-primario);
+}
+
+/* Seção de ações */
+.acoes-section {
+  text-align: center;
+  margin-top: var(--espacamento-xl);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .consulta-container {
+    padding: var(--espacamento-md);
+  }
+  
+  .total-geral-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .total-card-valor {
+    font-size: var(--fonte-2xl);
+  }
+  
+  .total-geral-section {
+    padding: var(--espacamento-md);
+  }
+}
